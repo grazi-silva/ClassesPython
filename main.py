@@ -33,3 +33,24 @@ class Funcionario(Pessoa):
 
     def __str__(self):
         return f"{super().__str__()}, Salário: {self.salario}"
+
+
+class Teste:
+    def executar(self):
+        pessoa = Pessoa("Maria", 30)
+        pessoa.set_cpf("123.456.789-00")
+        print(pessoa)
+
+        pessoa.set_idade(31)
+        print(f"CPF de {pessoa.nome}: {pessoa.get_cpf()}")
+
+        funcionario = Funcionario("João", 40, 5000)
+        funcionario.set_cpf("987.654.321-00")
+        print(funcionario)
+
+        funcionario.aumentar_salario(10)
+        print(f"Após aumento salarial: {funcionario}")
+
+
+teste = Teste()
+teste.executar()
